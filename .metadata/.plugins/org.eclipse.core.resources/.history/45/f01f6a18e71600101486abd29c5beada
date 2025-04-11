@@ -1,0 +1,64 @@
+package com.academia.authservice.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.academia.authservice.models.User;
+import com.academia.authservice.repository.UserRepository;
+
+
+/**
+ * Serviço responsável por registrar usuários no sistema.
+ * Valida os dados e salva o usuário com a senha criptografada.
+ * Futuramente vai ter mais funções
+ * DOCUMENTAR AQUI
+ * 
+ * Autor: Pedro Henrique
+ * Data: 11/04/2025
+ */
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+    private PasswordEncoder passwordEncoder;
+
+	/**
+	 * Busca todos usuários para o metodo GET
+	 * @return todos os usuários do banco de dados
+	 */
+	public List<User> findAll() {
+		return userRepository.findAll();
+	}
+	
+	/**
+	 * Busca um usuário pelo email
+	 * @param email
+	 * @return o usuario com o proprio email
+	 */
+
+	public Optional<User> findByEmail(String email) {
+		return userRepository.findByEmail(email);
+	}
+
+	
+	/**
+     * Salva um novo usuário no banco de dados com a senha criptografada.
+     *
+     * @param user objeto User a ser salvo
+     * @return o User salvo
+     */
+	public User save(User user) {
+		String hashedPassword = passwordEncoder.encode(user.getPassword());
+		user.setPassword(hashedPassword);
+		return userRepository.save(user);
+	}
+
+	// Básico somente para testes rapidos, depois implementaremos mais coisas
+}

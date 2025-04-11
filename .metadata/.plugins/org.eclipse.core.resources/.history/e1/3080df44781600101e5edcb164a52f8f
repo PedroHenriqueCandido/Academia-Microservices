@@ -1,0 +1,5 @@
+package com.academia.authservice.config;
+
+public class SecurityConfig {
+
+}

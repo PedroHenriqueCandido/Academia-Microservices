@@ -1,0 +1,27 @@
+package com.academia.authservice.security;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Component;
+
+import com.academia.authservice.models.User;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+@Component
+public class JwtUtil {
+
+    private final String secret = "meusegredosecreto1234567890123456"; // coloque isso no application.properties depois
+    private final long expirationMs = 86400000; // 1 dia
+
+    public String generateToken(User user) {
+        return Jwts.builder()
+                .setSubject(user.getEmail())
+                .claim("role", user.getRole())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
+                .signWith(SignatureAlgorithm.HS512, secret)
+                .compact();
+    }
+}

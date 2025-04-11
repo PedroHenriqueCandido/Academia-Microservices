@@ -1,0 +1,15 @@
+package com.academia.authservice.models;
+
+import java.io.Serializable;
+
+import jakarta.persistence.*;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="tb_users")
+public class User implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
+	
+
+}

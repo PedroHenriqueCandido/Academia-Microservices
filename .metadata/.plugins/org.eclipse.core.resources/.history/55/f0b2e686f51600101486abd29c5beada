@@ -1,0 +1,5 @@
+package com.academia.authservice.controller;
+
+public class TestController {
+
+}
