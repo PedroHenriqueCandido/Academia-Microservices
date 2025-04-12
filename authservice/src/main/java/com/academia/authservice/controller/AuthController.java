@@ -44,17 +44,6 @@ public class AuthController {
 	private JwtUtil jwtUtil;
 
 	/**
-	 * Lista todos os usuários cadastrados no sistema.
-	 *
-	 * @return Lista de usuários em formato JSON.
-	 */
-	@GetMapping("/users")
-	public ResponseEntity<List<User>> getAllUsers() {
-		List<User> users = userService.findAll();
-		return ResponseEntity.ok(users);
-	}
-
-	/**
 	 * Cadastra um novo usuário no sistema.
 	 *
 	 * @param user Objeto JSON contendo email, senha e role do usuário.
