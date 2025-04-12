@@ -47,7 +47,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable()) // Desabilita CSRF para facilitar requisições via Postman, por exemplo.
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/auth/register", "/auth/login","/auth/users").permitAll() // Libera endpoints públicos
+                .requestMatchers("/auth/register", "/auth/login","/auth/users","/api/register","/api/auth/register" ).permitAll() // Libera endpoints públicos
                 .requestMatchers("/admin/**").hasRole("ADMIN")                 // Apenas ADMIN
                 .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")      // USER ou ADMIN
                 .anyRequest().authenticated()                                 // Demais rotas exigem login

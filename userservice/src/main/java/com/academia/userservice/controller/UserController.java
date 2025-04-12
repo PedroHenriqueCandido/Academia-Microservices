@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.academia.userservice.DTO.AuthLoginRequest;
+import com.academia.userservice.DTO.AuthResponse;
 import com.academia.userservice.models.User;
 import com.academia.userservice.service.UserService;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
@@ -25,6 +27,11 @@ public class UserController {
         return userService.createUser(user);
     }
     
+    @PostMapping("/login")
+    public AuthResponse login(@RequestBody AuthLoginRequest loginRequest) {
+        return userService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());
+    }
+
     // Endpoint para buscar usuário por email
     @GetMapping("/{email}")
     public User getUserByEmail(@PathVariable String email) {

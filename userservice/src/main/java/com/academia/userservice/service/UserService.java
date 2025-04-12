@@ -3,7 +3,9 @@ package com.academia.userservice.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.academia.userservice.DTO.AuthLoginRequest;
 import com.academia.userservice.DTO.AuthRegistrationRequest;
+import com.academia.userservice.DTO.AuthResponse;
 import com.academia.userservice.client.AuthClient;
 import com.academia.userservice.models.User;
 import com.academia.userservice.repository.UserRepository;
@@ -29,6 +31,14 @@ public class UserService {
         
         return savedUser;
     }
+    
+    public AuthResponse loginUser(String email, String password) {
+        AuthLoginRequest loginRequest = new AuthLoginRequest();
+        loginRequest.setEmail(email);
+        loginRequest.setPassword(password);
+        return authClient.loginUser(loginRequest);
+    }
+
     
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email).orElse(null);
