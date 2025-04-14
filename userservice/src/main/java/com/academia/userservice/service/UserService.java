@@ -1,5 +1,8 @@
 package com.academia.userservice.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,10 +42,28 @@ public class UserService {
         return authClient.loginUser(loginRequest);
     }
 
-    
+ 
     public User getUserByEmail(String email) {
         return userRepository.findByEmail(email).orElse(null);
     }
+    
+    public List<User> findAll(){
+    	return userRepository.findAll();
+    }
 	
-	
+    public User updateUser(Long id, User updatedUser) {
+        return userRepository.findById(id).map(existingUser -> {
+            existingUser.setFirstName(updatedUser.getFirstName());
+            existingUser.setLastName(updatedUser.getLastName());
+            existingUser.setPhoneNumber(updatedUser.getPhoneNumber());
+            existingUser.setAddres(updatedUser.getAddres());
+            existingUser.setBirthDate(updatedUser.getBirthDate());
+            existingUser.setRole(updatedUser.getRole());
+            return userRepository.save(existingUser);
+        }).orElse(null);
+    }
+
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
 }
