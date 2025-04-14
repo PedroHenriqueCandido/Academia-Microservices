@@ -1792,3 +1792,12 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2025-04-14 16:03:15,444 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-04-14 16:03:15,460 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-04-14 16:03:15,464 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pedro\Videos\Empresas\academia-saas\userservice\src\test\resources
+2025-04-14 16:04:27,087 [Worker-11: Launching userservice - UserserviceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-04-14 16:04:27,093 [Worker-11: Launching userservice - UserserviceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-14 16:04:27,096 [Worker-11: Launching userservice - UserserviceApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pedro\Videos\Empresas\academia-saas\userservice\src\test\resources
+2025-04-14 16:13:08,216 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-14 16:13:08,217 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-14 16:13:08,220 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pedro\Videos\Empresas\academia-saas\userservice\src\test\resources
+2025-04-14 16:20:09,249 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-04-14 16:20:09,255 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-04-14 16:20:09,258 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\pedro\Videos\Empresas\academia-saas\userservice\src\test\resources

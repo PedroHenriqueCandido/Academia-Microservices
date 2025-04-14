@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="com.academia.userservice.DTO.AuthRegistrationRequest"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Transient"/>
     <fullyQualifiedTypeName name="com.academia.userservice.models.User"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
