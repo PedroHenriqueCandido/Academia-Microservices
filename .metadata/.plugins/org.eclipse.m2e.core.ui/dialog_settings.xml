@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\pedro\Videos\Empresas\academia-saas\planoservice"/>
 			<item value="C:\Users\pedro\Videos\Empresas\academia-saas\userservice"/>
 		</list>
 		<list key="projectNameTemplate">
