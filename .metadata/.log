@@ -5492,3 +5492,12 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected ST
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 13:10:36.959
 !MESSAGE Boot project ADDED: planoservice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 13:20:45.133
+!MESSAGE Classpath changed for project: academiaservice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 13:20:45.133
+!MESSAGE Boot project ADDED: academiaservice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-04-15 13:20:46.324
+!MESSAGE Classpath changed for project: academiaservice
