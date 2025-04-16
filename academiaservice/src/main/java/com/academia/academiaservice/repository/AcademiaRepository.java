@@ -1,5 +1,9 @@
 package com.academia.academiaservice.repository;
 
-public class AcademiaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.academia.academiaservice.model.Academia;
+
+public interface AcademiaRepository extends JpaRepository<Academia, Long> {
 
 }
