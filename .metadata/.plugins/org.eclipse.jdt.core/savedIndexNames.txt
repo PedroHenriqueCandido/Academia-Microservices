@@ -10,7 +10,6 @@ INDEX VERSION 1.134+C:\Users\pedro\Videos\Empresas\academia-saas\.metadata\.plug
 3123478420.index
 737681128.index
 1865797976.index
-627478949.index
 3525393631.index
 1599959736.index
 782216802.index
